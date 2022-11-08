@@ -71,18 +71,27 @@ PART TWO:
 # 1. Write a function called 'hello_world' that does not take any arguments and
 #    prints "Hello World".
 
+def hello_world():
+    print ("Hello World")
 
 # 2. Write a function called 'say_hi' that takes a name as a string and
 #    prints "Hi" followed by the name.
-
+def say_hi(name):
+    print (f"Hi {name}")
 
 # 3. Write a function called 'print_product' that takes two integers and
 #    multiplies them together. Print the result.
 
+def print_product(int1, int2):
+    result = int1 * int2
+    print (result)
 
 # 4. Write a function called 'repeat_string' that takes a string and an integer
 #    and prints the string that many times
 
+def repeat_string(thing1, num):
+    while range(num):
+        print (thing1)
 
 # 5. Write a function called 'print_sign' that takes an integer and prints
 #    "Higher than 0" if higher than zero and "Lower than 0" if lower than zero.
