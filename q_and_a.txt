@@ -3,135 +3,161 @@ Hackbright Engineering
 Unit 1 Study Guide
 https://fellowship.hackbrightacademy.com/materials/wmt5/homework/study-guide-1/#functions-questions
 
-$ hbget study-guide-1 --homework
-
 Critical Topics from This Unit
 
-    What is an algorithm? Provide some examples, both in the context in of computer science and beyond.
+What is an algorithm? Provide some examples, both in the context in of computer science and beyond.
+    An algortithim is a set of instructions that solves some problem. Algorithims are most commonly known by th epublic to be implemented in social media
 
-    What is a heuristic? How do they relate to algorithms?
+What is a heuristic? How do they relate to algorithms?
+    A hueristic is algorithim but it doesnt solve every single instance. Almost like a band-aid.
 
-    What is the brute force method? What are some problems with it?
+What is the brute force method? What are some problems with it?
+    Explicitly coding something and every possible way via exhaustion. Simple but slow.
 
-    What is version control? How is it different than simply saving a file?
-
-    What’s the difference between Git and Github?
+What is version control? How is it different than simply saving a file?
+    Version control is neatly sorting though all changes in repository or set of scripts/programs/functions. It tracks changes and allows for streamlined collaboration between teams,
+    
+What’s the difference between Git and Github?
+    Git is local to your machine. Troublesome to use if you use multiple machines for work.projects. Github is on the clous and can be accessedfrom anywhere by whoever you want.
 
     Git commands to know:
 
-        git log
+        git log ---------------------------------> shows all changes to files 
 
-        git init
+        git init ---------------------------------> initializes empty local git repo/remote
 
-        git status
+        git status -------------------------------> shows files staged for commits or not AND what files were modified and if theyre tracked(added) or not by color (red/green)
 
-        git add
+        git add ---------------------------------> tracks files, aka stages them, can use (. switch) at end. i.e. git add . to add all
 
-        git commit with -a and -m
+        git commit with -a and -m ----------------> commit (-a switch) all tracked files to remote repo, with a message (-m switch), i.e. git ocmmit -am "init commit status.py"
 
-        git remote add
+        git remote add ---------------------------> takes in two arguments: 1. The name you want to use to refer to your remote (origin is the name most folks use by default) but. THIS allows you to connect your local repo with multiple remote repos. 2. The remote’s address
 
-        git remote -v
+        git remote -v ----------------------------> outputs remote names (fetch/push) to terminal 
 
-        git push
+        git push ---------------------------------> pushes saved changes to remote repo , MUST include destination
+           
+        git clone ---------------------------------> in desired directory, paste clone URL afterthis in terminal, 
 
-    What does the file .gitignore do? What is the content of the .gitignore file?
 
-    What are some files that git should generally ignore?
 
-    How can you tell whether a file is being ignored by git or not?
 
-    If you git add a secret file, is it possible to remove that file from the history of git?
+What does the file .gitignore do? What is the content of the .gitignore file?
+    a file where you paste files you want to ignore, esp when merging
 
-    Why is using the command line important?
+What are some files that git should generally ignore?
+    top secret files! Notes you don’t want others to see, Python virtual environment directory, Python .pyc files, Any crufty files your editor or operating system makes
+    
+How can you tell whether a file is being ignored by git or not?
+    you wont see it...you can run "ls -a" to see hidden files
 
-    What is the prompt in the context of the command line?
+If you git add a secret file, is it possible to remove that file from the history of git?
+    never :(
+    
+Why is using the command line important?
+    its industry standard, its faster to get things done
+ 
+What is the prompt in the context of the command line?
+    >>> this thing right here elicits an action
 
     Shell commands to know:
 
-        ls
+        ls ---------------------------------> list files in directory
 
-        pwd
+        pwd ---------------------------------> show me what directory im in, even thoughitsin the address bar of terminal
 
-        cp
+        cp ---------------------------------> copy a file
 
-        mv
+        mv ---------------------------------> move
 
-        cd
+        cd ---------------------------------> change direcotry
 
-        mkdir
+        mkdir ---------------------------------> make directory
 
-        rm
+        rm ---------------------------------> remove file/delete
 
-        man
+        man ---------------------------------> Show the help manual of the command
 
-        any command with --help
+        any command with --help --------------> [command] -h 	Get help about a command
 
-        CTRL-D and CTRL-C
+        CTRL-D and CTRL-C ------------------->exit shell....kill whats running
 
-    What’s the difference between relative and absolute paths?
+What’s the difference between relative and absolute paths?
+    relative is in relation to....so one above....absolute is complete path from root
 
-    What’s the difference between parameters and arguments?
+What’s the difference between parameters and arguments?
+    parameters go in function definitions and arguments go in function calls!
 
-    What’s the difference between return, break, and print?
+What’s the difference between return, break, and print?
+    return is the computation...the result of the function...break stops a loop, print is the output of the function
 
-    What does a function return if it doesn’t have a return statement?
+What does a function return if it doesn’t have a return statement?
+    None
+    
+What is a default parameter?
+    in "def make_egg(ingredients, butter=1", the def parameter is butter....it can be pre-assignd, used not used and reassigned at the call
 
-    What is a default parameter?
+What is scope? What is function scope?
+    where a var is relative to function
 
-    What is scope? What is function scope?
-
-    What are some important Python style considerations for writing functions?
-
+What are some important Python style considerations for writing functions?
+    function name being an action...doc strings...example code...comments...simple...does 1 thing
+    
     Python list methods/functions to know:
 
-        sorted()
+        sorted() ---------------------------------> sorts in alpha order, built in python function that can b used on mutable data structures
 
-        .sort()
+        .sort() ---------------------------------> sorts lists alpha orderor num order
 
-        .append()
+        .append() ---------------------------------> tacks on to end of list
 
-        .extend()
+        .extend() ---------------------------------> adds lists to end of another list
 
-        How to index a list
+        How to index a list ------------------------> list[0], <---by first item, list["animal"] <---by value
 
-        How to slice a list
+        How to slice a list -----------------------------> list[1:1:-1] many ways, start/stop/step, forward or backward
 
-        How to loop over a list
+        How to loop over a list :
 
-            Using range(len(some_list))
+            Using range(len(some_list)) ------------------------> for loop by length and start/stop
 
-            Using a counter and indexing the list
+            Using a counter and indexing the list ------------------------> for loop by index, or enumerate, counters, if-statements if needed
 
-            Without using either of the above (just a for-loop)
+            Without using either of the above (just a for-loop) --------> ????
 
-    What is mutability?
+What is mutability?
+    the ability to iterate through and through a data structure. can do it to some but not all
 
-    How is Python memory different than C memory? How are Python variables different than “classic” variables?
+How is Python memory different than C memory? How are Python variables different than “classic” variables?
+    ????? first in first out the stack.
 
-    What is garbage collection?
+What is garbage collection?
+    ????????
 
-    What is the id function? What does the comparator is do in Python?
+What is the id function? What does the comparator is do in Python?
+    ?????/
 
-    What are sets good for?
+What are sets good for?
+  Mutable, iterable, unordered, Unique collection of items,Fast look-up (reason mysterious for now 😭)
 
     Set methods to know:
 
-        .add()
+        .add("") --------------------------------->  moods.add('grumpy') ------> Notice, it’s add not append, since sets are unordered
 
-        len()
+        len(tuple) ---------------------------------> get length..doesnt count duplicates
 
-        .remove()
+        .remove()---------------------------------> delete
 
-        How to create a set
+        How to create a set ---------------------------------> hey = ["hi", "bye"], hey = set(hey)
 
-        How to check if something is in a set
+        How to check if something is in a set ----------------> ????????
 
-    What are tuples good for?
+    What are (tuples) good for? ------------------------->things you dont want to change, meaningful data
 
-        How do you create a tuple?
+        How do you create a tuple? ------------------------> tuple = ("hi", "bye")
 
-        How to index a tuple
+        How to index a tuple -------------------------------> tuple[0]
 
 Practice Coding Questions
 
@@ -195,5 +221,3 @@ ALL TESTS PASSED. GOOD WORK!
 Solution
 
 Check the solution here
-
-© 2022 Hackbright Academy
