@@ -1,8 +1,6 @@
 """List Practice
 Edit the functions until all of the doctests pass when
-you run this file.
-"""
-
+you run this file."""
 
 def print_list(items):
     """Print each item in the input list.
@@ -16,8 +14,8 @@ def print_list(items):
         3
         9
     """
-
-    print("the wrong thing")
+    for i in items:
+        print (i)
 
 
 def long_words(words):
@@ -36,8 +34,14 @@ def long_words(words):
         >>> long_words(["all", "are", "tiny"])
         []
     """
-
-    return ['the wrong thing']
+    new_list=[]
+    for word in words:
+        if len(word) <= 4:
+            pass
+        else:
+            new_list.append(word)
+    return new_list
+    
 
 
 def n_long_words(words, n):
@@ -54,7 +58,11 @@ def n_long_words(words, n):
         ['apples', 'bananas']
     """
 
-    return ['the wrong thing']
+    new_list=[]
+    for word in words:
+        if len(word) > n:
+            new_list.append(word)
+    return new_list
 
 
 def smallest_int(numbers):
@@ -73,8 +81,12 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
-
-    return 100
+    numbers.sort()
+    for num in numbers: 
+        if num is False:
+            return True
+        else:
+            return numbers[0]
 
 
 def largest_int(numbers):
@@ -93,8 +105,12 @@ def largest_int(numbers):
         >>> largest_int([]) is None
         True
     """
-
-    return 0
+    numbers.sort()
+    for num in numbers:
+        if num is False:
+            return True
+        else:
+            return numbers[-1]
 
 
 def halvesies(numbers):
@@ -111,8 +127,11 @@ def halvesies(numbers):
         >>> halvesies([1, 5])
         [0.5, 2.5]
     """
-
-    return []
+    new_list=[]
+    for num in numbers:
+        div=num/2
+        new_list.append(div)
+    return new_list
 
 
 def word_lengths(words):
@@ -123,11 +142,14 @@ def word_lengths(words):
         >>> word_lengths(["hello", "hey", "hello", "spam"])
         [5, 3, 5, 4]
     """
+    new_list=[]
+    for word in words:
+        amount=len(word)
+        new_list.append(amount)
+    return new_list
 
-    return []
 
-
-def sum_numbers(numbers):
+def sum_numbers(numbers): #harder for me
     """Return the sum of all of the numbers in the list.
     Python has a built-in function, `sum()`, which already does
     this --- but for this exercise, you should not use it.
@@ -142,8 +164,13 @@ def sum_numbers(numbers):
         >>> sum_numbers([])
         0
     """
-
-    return None
+    total=0
+    for i, num in enumerate(numbers):
+        if num is False:
+            return 1-1
+        else:
+            total=total+numbers[i]
+    return total
 
 
 def mult_numbers(numbers):
@@ -165,11 +192,32 @@ def mult_numbers(numbers):
         >>> mult_numbers([])
         1
     """
+    # product=1
+    # for i, num in enumerate(numbers): #for number[0], num = 1, number[1], num = 2, number[2], num = 3
+    #     if num ==0:
+    #         # product=0
+    #         product=num*num #0*0
+    #         return product
+    #     elif num not in numbers: #product of numbers=[]==1
+    #         product=1
+    #         return product 
+    #     elif num:
+    #         first_value= numbers[num]
+    #         # numbers[i+1]*num #first_value=2*1
+    #         second_val=numbers[i+1]
+    #         # product=product*first_value #X=1*2
+    #         product=first_value*second_val
+    #     return product
 
-    return None
+    #needed to look at solution. i overcomplicated it!
+    product=1
+    for num in numbers:
+        product=product*num
+    return product
 
 
-def join_strings(words):
+
+def join_strings(words): #needed help
     """Return a string of all input strings joined together.
     Python has a built-in method, `list.join()` --- but for
     this exercise, **you should not use it**.
@@ -184,8 +232,15 @@ def join_strings(words):
         >>> join_strings([])
         ''
     """
+    # turn_to_string=[] #empty list is wrong
+    a_string=""
+    for i in words: #words[0]=spam words[1]=spam   words[2]=muffin   words[3]=balloonicorn
+        if len(words) <=0:
+            return words[i]
+        if len(words) >= 1:
+            a_string += i
 
-    return "Not the right thing"
+    return a_string
 
 
 def average(numbers):
