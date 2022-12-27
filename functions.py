@@ -72,6 +72,10 @@ PART TWO:
 #    prints "Hello World".
 
 def hello_world():
+    """
+    >>> hello_world()
+    Hello World
+    """
     print ("Hello World")
 
 # 2. Write a function called 'say_hi' that takes a name as a string and
@@ -89,28 +93,52 @@ def print_product(int1, int2):
 # 4. Write a function called 'repeat_string' that takes a string and an integer
 #    and prints the string that many times
 
-def repeat_string(thing1, num):
-    while range(num):
-        print (thing1)
+def repeat_string(thing1, num): #needed help
+    print(thing1 * num)
 
 # 5. Write a function called 'print_sign' that takes an integer and prints
 #    "Higher than 0" if higher than zero and "Lower than 0" if lower than zero.
 #    If the integer is zero, print "Zero".
 
+def print_sign(num):
+    if num > 0:
+        print("Higher than 0")
+    elif num <0:
+        print("Lower than 0")
+    elif num ==0:
+        print ("Zero")
 
 # 6. Write a function called 'is_divisible_by_three' that takes an integer and
 #    returns a boolean (True or False), depending on whether the number is
 #    evenly divisible by 3.
 
+def is_divisible_by_three(num):
+    if num % 3==0:
+        return True
+    else:
+        return False
 
 # 7. Write a function called 'num_spaces' that takes a sentence as one string
 #    and returns the number of spaces.
 
+def num_spaces(sentence): #needed help
+
+    spaces = 0
+
+    for char in sentence:
+        if char == " ":
+            spaces += 1  # same as spaces = spaces + 1
+    return spaces
 
 # 8. Write a function called 'total_meal_price' that can be passed a meal price
 #    and a tip percentage. It should return the total amount paid
 #    (price + price * tip). **However:** passing in the tip percentage should
 #    be optional; if not given, it should default to 15%.
+
+def total_meal_price(price, tip=.15):
+    total=price + price * tip
+    return total
+
 
 
 # 9. Write a function called 'sign_and_parity' that takes an integer as an
@@ -122,6 +150,22 @@ def repeat_string(thing1, num):
 #    unpack what is returned into two variables --- sign and parity (whether
 #    it's even or odd). Print sign and parity.
 
+
+def sign_and_parity(int):
+    result=[]
+    if int % 2 ==0: 
+        result.append("Even")
+    elif int >= 0: #sero i sa positive number
+        result.append("Positive")
+    elif int < 0:
+        result.append("Negative")
+    if int % 2 > 0:
+        result.append("Odd")
+    return result
+
+sign, parity = sign_and_parity(8)
+print (sign)
+print(parity)
 
 ###############################################################################
 
@@ -140,6 +184,15 @@ def repeat_string(thing1, num):
 #    Use the function from #1 to construct the full title for the letter's
 #    greeting.
 
+def full_title(name, job="Engineer!"): #needed help
+    # official=""
+    # official +=name, job
+    # return official
+
+    print (f"{name}, {job}")
+
+def write_letter(name, job, sender):
+    print(f"Dear {job} {name}, I think you are amazing! Sincerely, {sender}.")
 
 ###############################################################################
 
